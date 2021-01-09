@@ -35,7 +35,9 @@ public class Order implements Serializable {
 	inverseJoinColumns = @JoinColumn(name = "product_id"))
 	private Set<Product> products = new HashSet<>();
 
-	private Order() {
+	
+	public Order() {
+		
 	}
 
 	public Order(Long id, String address, Double latitude, Double longitude, Instant moment, OrderStatus status) {
